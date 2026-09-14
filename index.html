@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusFlow Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#"><span class="brand-mark">CF</span><span>CampusFlow</span></a>
+      <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a class="nav-link active" href="#">Dashboard</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#deadlines">Deadlines</a>
+        <a class="nav-link" href="#resources">Resources</a>
+      </nav>
+      <div class="profile"><div class="avatar">AZ</div><div class="profile-copy"><strong>Alex Student</strong><span>Web Programming</span></div></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">MONDAY WORKSPACE</span>
+          <h1>Build, learn, and ship something useful.</h1>
+          <p class="hero-text">Track your current web-development tasks, upcoming deadlines, and project progress in one place.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View projects</a>
+            <a class="button button-secondary" href="#resources">Open resources</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-label">This week</p>
+          <div class="progress-row"><span>Course progress</span><strong>68%</strong></div>
+          <div class="progress-track"><div class="progress-fill" style="width: 68%"></div></div>
+          <div class="hero-panel-stats">
+            <div><strong>4</strong><span>Open tasks</span></div>
+            <div><strong>2</strong><span>Due soon</span></div>
+            <div><strong>7</strong><span>Completed</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container dashboard-section">
+      <div class="section-heading"><div><p class="section-kicker">OVERVIEW</p><h2>Your workspace</h2></div><p class="section-description">A quick snapshot of what needs attention today.</p></div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-icon">01</div><div><p>Active projects</p><strong>3</strong><span class="trend positive">+1 this month</span></div></article>
+        <article class="stat-card"><div class="stat-icon">02</div><div><p>Tasks completed</p><strong>18</strong><span class="trend positive">+6 this week</span></div></article>
+        <article class="stat-card"><div class="stat-icon">03</div><div><p>Quiz average</p><strong>84%</strong><span class="trend neutral">Last 4 quizzes</span></div></article>
+        <article class="stat-card"><div class="stat-icon">04</div><div><p>Focus time</p><strong>7.5h</strong><span class="trend positive">+12% vs last week</span></div></article>
+      </div>
+    </section>
+
+    <section class="container dashboard-section" id="projects">
+      <div class="section-heading project-heading">
+        <div><p class="section-kicker">PROJECTS</p><h2>Current work</h2></div>
+        <div class="filter-group" aria-label="Project filters">
+          <button class="filter-button active" data-filter="all">All</button><button class="filter-button" data-filter="active">Active</button><button class="filter-button" data-filter="done">Done</button>
+        </div>
+      </div>
+      <div class="projects-grid" id="projectGrid">
+        <article class="project-card" data-status="active">
+          <div class="project-top"><span class="badge badge-purple">Frontend</span><span class="project-status status-active">Active</span></div>
+          <h3>Responsive Portfolio</h3><p>Create a polished portfolio with reusable components and responsive layouts.</p>
+          <div class="project-meta"><span>Due Sep 21</span><span>72% complete</span></div>
+          <div class="progress-track small"><div class="progress-fill purple" style="width:72%"></div></div><a class="text-link" href="#">Open project →</a>
+        </article>
+        <article class="project-card" data-status="active">
+          <div class="project-top"><span class="badge badge-blue">API</span><span class="project-status status-active">Active</span></div>
+          <h3>Weather Dashboard</h3><p>Fetch remote data, handle loading states, and present forecast information clearly.</p>
+          <div class="project-meta"><span>Due Sep 28</span><span>45% complete</span></div>
+          <div class="progress-track small"><div class="progress-fill blue" style="width:45%"></div></div><a class="text-link" href="#">Open project →</a>
+        </article>
+        <article class="project-card" data-status="done">
+          <div class="project-top"><span class="badge badge-green">JavaScript</span><span class="project-status status-done">Done</span></div>
+          <h3>Task Manager</h3><p>Build a small CRUD interface with filtering, local storage, and form validation.</p>
+          <div class="project-meta"><span>Submitted Sep 7</span><span>100% complete</span></div>
+          <div class="progress-track small"><div class="progress-fill green" style="width:100%"></div></div><a class="text-link" href="#">View submission →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container two-column-section">
+      <section class="panel" id="deadlines">
+        <div class="panel-heading"><div><p class="section-kicker">DEADLINES</p><h2>Coming up</h2></div><a class="text-link" href="#">See all</a></div>
+        <div class="deadline-list">
+          <article class="deadline-item"><div class="date-box"><strong>18</strong><span>SEP</span></div><div class="deadline-copy"><strong>Tailwind migration</strong><span>Web Programming · 23:59</span></div><span class="badge badge-red">2 days</span></article>
+          <article class="deadline-item"><div class="date-box"><strong>21</strong><span>SEP</span></div><div class="deadline-copy"><strong>Portfolio checkpoint</strong><span>Web Programming · 18:00</span></div><span class="badge badge-yellow">5 days</span></article>
+          <article class="deadline-item"><div class="date-box"><strong>28</strong><span>SEP</span></div><div class="deadline-copy"><strong>Weather Dashboard</strong><span>Web Programming · 23:59</span></div><span class="badge badge-gray">12 days</span></article>
+        </div>
+      </section>
+      <aside class="panel resource-panel" id="resources">
+        <p class="section-kicker">RESOURCES</p><h2>Useful links</h2><p class="resource-intro">Keep these close while working through the project.</p>
+        <div class="resource-list">
+          <a class="resource-link" href="#"><span class="resource-number">01</span><span><strong>Course repository</strong><small>Starter code and weekly tasks</small></span></a>
+          <a class="resource-link" href="#"><span class="resource-number">02</span><span><strong>Reference notes</strong><small>Quick examples and explanations</small></span></a>
+          <a class="resource-link" href="#"><span class="resource-number">03</span><span><strong>Submission guide</strong><small>Checklist before you submit</small></span></a>
+        </div>
+        <div class="tip-box"><strong>Tip</strong><p>Use browser DevTools while migrating the page. Compare computed styles before and after each change.</p></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>CampusFlow · Web Programming</span><span>Starter project for CSS → Tailwind migration</span></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
